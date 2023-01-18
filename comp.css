@@ -177,6 +177,7 @@ button:hover {
         backdrop-filter: blur(10px);
         transition: all 1s linear;
     }
+
     
 }
 
@@ -254,6 +255,7 @@ ul{
 .flex{
     width: 100%;
     display : flex ;
+    flex-wrap: wrap;
     align-items: center;
   justify-content: center;
 }
