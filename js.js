@@ -1,3 +1,27 @@
+/*RESPONSIVE*/
+const
+  screen = {
+    small : 0,
+    medium : 400,
+    large : 800
+  } ;
+function resizeHandler() {
+
+    // get window width
+    const iw = window.innerWidth ;
+   
+    // determine named size
+    let size = null ;
+    for (let s in screen) {
+      if (iw >= screen[s]) size = s ;
+    }
+    return size;
+}
+
+
+
+
+
 /*Variables*/
 const boutonToggle = document.querySelector('.boutonToggle') ;
 const navbarOptions = document.querySelector('ul') ;
@@ -33,12 +57,23 @@ boutonToggle.addEventListener('click',function(){
         
     }else {
         burger.classList.toggle('responsiveHidden') ;
-        $(".burgerMenu").animate({width: '30%'},500,function(){
-            boutonToggle.addEventListener('click',function(){
-                $(".burgerMenu").removeAttr('style') ;
-            })
+        if (resizeHandler()=='medium' || resizeHandler()=='small'){
+            $(".burgerMenu").animate({width: '60%'},500,function(){
+                boutonToggle.addEventListener('click',function(){
+                    $(".burgerMenu").removeAttr('style') ;
+                })
+                
+            }) ;
             
-        }) ;
+        }else {
+            $(".burgerMenu").animate({width: '30%'},500,function(){
+                boutonToggle.addEventListener('click',function(){
+                    $(".burgerMenu").removeAttr('style') ;
+                })
+                
+            }) ;
+        }
+        
         
         
     }   
@@ -89,4 +124,5 @@ for (var i=0 ; i<logos.length ; i++){
 
 
 /*--------*/
+
 
