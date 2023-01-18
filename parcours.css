@@ -1,0 +1,48 @@
+.marginPerso{
+    margin-left: 3em;
+}
+#imgPhoto:hover{
+    opacity: 50%;
+}
+#imgPhoto{
+    border-radius: 10px;
+}
+body{
+    background-image: url(fond.jpg);
+}
+.fs-perso{
+    font-size: 2em ;
+}
+.margin-auto{
+    margin: auto ;  
+}
+.width-perso{
+    width: 1px;
+}
+.gris-trans2{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.gris-trans{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fc-perso-cyan2{
+    color: #92c4ff  
+}
+.fc-perso-cyan{
+    color:#8ccaf3
+}
+.fc-perso-white{
+    color: white
+}
+
+button{
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.fs-perso{
+    font-size: 20px;
+}
+.bg-perso-cyan{
+    background-color: #92c4ff;
+}

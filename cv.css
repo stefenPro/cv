@@ -1,0 +1,33 @@
+.marginPerso{
+    margin-top: 4em;
+
+}
+#imgPhoto{
+    margin-top: 15px;
+    margin-left: 1em;
+    height: 175px;
+    width: 230px;
+    filter: drop-shadow(-4px 4px 2px black);
+
+}
+
+.title span {
+    display: inline-block;
+    overflow: hidden ;
+}
+.title span span {
+    animation: titleReveal .7s both;
+
+}
+
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
