@@ -105,8 +105,6 @@ button:hover {
     margin: 0;
     font-size: 2rem;
     color : #f1f1f1 ;
-    padding: 0;
-    margin: 0;
     border-style: none;
     transition: all .5s;
     
@@ -130,56 +128,9 @@ button:hover {
     display: flex;
 }
 
-@media screen and (min-width : 994px) {
-    #nameTitle{
-        display: none;
-    }
-    .boutonToggle{
-        display : none ;
-    }
-    .burger{
-        display: none ;
-    }
-    #navbarSupportedContent{
-        overflow: hidden;
-        width: 100%;
-    }
-}   
-@media screen and (max-width : 993px) {
-    #divNavbar{
-        height: 100px ;
-    }
-    .responsive{
-        display: flex;
-        flex-direction: column;
-    }
-    .burgerMenu ul{
-        position: inherit;
-        text-align: center;
-        top : 150px ;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        
-    }
-    
-    .responsiveHidden{
-        display: none;
-    }
-    body {
-        height: 100%;
-    }
-    .blur{
-        width: 100%;
-        min-height: 100% ;
-        position: absolute ;
-        background-color: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        transition: all 1s linear;
-    }
 
-    
-}
+
+
 
 .boutonToggle{
     width: 42px;
@@ -323,4 +274,61 @@ margin-right: 10px;
 }
 .imgBloc{
     background-color: white;
+}
+
+
+@media screen and (min-width : 994px) {
+    #nameTitle{
+        display: none;
+    }
+    .boutonToggle{
+        display : none ;
+    }
+    .burger{
+        display: none ;
+    }
+    #navbarSupportedContent{
+        overflow: hidden;
+        width: 100%;
+    }
+}   
+@media screen and (max-width : 993px) {
+    #divNavbar{
+        height: 100px ;
+    }
+    .responsive{
+        display: flex;
+        flex-direction: column;
+    }
+    .burgerMenu ul{
+        position: inherit;
+        text-align: center;
+        top : 150px ;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+    
+    .responsiveHidden{
+        display: none;
+    }
+    body {
+        height: 100%;
+    }
+    .blur{
+        width: 100%;
+        min-height: 100% ;
+        position: absolute ;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 1s linear;
+    }
+    #imgPhoto{
+        height: 70x;
+        width: 100px;
+        margin: 0;
+        margin-right: 10px;
+        
+        }
 }
