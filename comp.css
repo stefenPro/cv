@@ -449,10 +449,10 @@ header {
     }
 }
 @media screen and (max-width : 458px){
-    .forH2 h2 {
+    .forH2 h2 , .efd h2{
         font-size: 1em;
     }
-    .para1 p {
+    .para1 p, .efd p {
         font-size: .9em;
     }
     .backSkills{
