@@ -326,15 +326,32 @@ ul {
 #enfant {
     width: 10%;
     height: 100%;
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
-    float: right;
-
+    transition: all .5s;
+    color : white ;
+    text-align: center;
+    padding-top: 40%;
+}
+#enfant:hover {
+    background-color: #000;
+    transition: all .5s;
 }
 #skillsBar{
     display: flex;
 }
 .para1 p {
     font-size: 1.5em;
+}
+.backSkills {
+    background-color: #7db27d;
+    padding: 10px;
+    width: 55%;
+    margin: 23%;
+    margin-top : 0 ;
+    margin-bottom: 0;
+    align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width : 994px) {
@@ -407,5 +424,8 @@ ul {
 @media screen and (max-width : 458px){
     .forH2 h2 {
         font-size: 1em;
+    }
+    .para1 p {
+        font-size: .9em;
     }
 }

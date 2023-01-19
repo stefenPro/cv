@@ -113,23 +113,77 @@ for (var i=0 ; i<parents.length ; i++){
     var pourcent = parseInt(skillsPourcent[i]);
     if (i==0){
         parents[i].style.backgroundImage = "url('html-5.png')";
-        enfants[i].style.width = (100-pourcent)+'%';
+        enfants[i].style.width = (pourcent)+'%';
     }else if (i==1){
         parents[i].style.backgroundImage = "url('css-3.png')";
-        enfants[i].style.width = (100-pourcent)+'%';
+        enfants[i].style.width = (pourcent)+'%';
     }else if (i==2){
         parents[i].style.backgroundImage = "url('script-java.png')";
-        enfants[i].style.width = (100-pourcent)+'%';
+        enfants[i].style.width = (pourcent)+'%';
     }else if (i==3){
         parents[i].style.backgroundImage = "url('php.png')";
-        enfants[i].style.width = (100-pourcent)+'%';
+        enfants[i].style.width = (pourcent)+'%';
     }else if (i==4){
         parents[i].style.backgroundImage = "url('base-de-donnees.png')";
-        enfants[i].style.width = (100-pourcent)+'%';
+        enfants[i].style.width = (pourcent)+'%';
     }else if (i==5){
         parents[i].style.backgroundImage = "url('python.png')";
-        enfants[i].style.width = (100-pourcent)+'%';
+        enfants[i].style.width = (pourcent)+'%';
 }
 }
 
 /*--------*/
+
+/*Skills Hover*/
+console.log(enfants[1])
+for (var i=0 ; i<parents.length ; i++){
+    var pourcent = parseInt(skillsPourcent[i]);
+    if (i==0){
+        enfants[0].addEventListener('mouseover',function(){
+            enfants[0].innerHTML = skillsPourcent[0]+'%'
+        })
+        enfants[0].addEventListener('mouseleave',function(){
+            enfants[0].innerHTML = ''
+        })
+        
+    }else if (i==1){
+        enfants[1].addEventListener('mouseover',function(){
+            enfants[1].innerHTML = skillsPourcent[1]+'%'
+        })
+        enfants[1].addEventListener('mouseleave',function(){
+            enfants[1].innerHTML = ''
+        })
+    }else if (i==2){
+        enfants[2].addEventListener('mouseover',function(){
+            enfants[2].innerHTML = skillsPourcent[2]+'%'
+        })
+        enfants[2].addEventListener('mouseleave',function(){
+            enfants[2].innerHTML = ''
+        })
+    
+    }else if (i==3){
+        enfants[3].addEventListener('mouseover',function(){
+            enfants[3].innerHTML = skillsPourcent[3]+'%'
+        })
+        enfants[3].addEventListener('mouseleave',function(){
+            enfants[3].innerHTML = ''
+        })
+    
+    }else if (i==4){
+        enfants[4].addEventListener('mouseover',function(){
+            enfants[4].innerHTML = skillsPourcent[4]+'%'
+        })
+        enfants[4].addEventListener('mouseleave',function(){
+            enfants[4].innerHTML = ''
+        })
+    
+    }else if (i==5){
+        enfants[5].addEventListener('mouseover',function(){
+            enfants[5].innerHTML = skillsPourcent[5]+'%'
+        })
+        enfants[5].addEventListener('mouseleave',function(){
+            enfants[5].innerHTML = ''
+        })
+       
+}
+}
