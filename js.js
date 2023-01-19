@@ -187,3 +187,39 @@ for (var i=0 ; i<parents.length ; i++){
        
 }
 }
+
+/*----------*/
+/*Navbar*/
+
+    /*variables*/
+    var skill = document.querySelector('.skill');
+    var etude = document.querySelector('.etude');
+    var lastScroll = 0;
+    var body =  document.body;
+
+
+    /*code*/
+    skill.addEventListener('click',function(){
+        if (!body.classList.contains('scroll-down'))
+        body.classList.add('scroll-down');
+    })
+    etude.addEventListener('click',function(){
+        if (!body.classList.contains('scroll-down'))
+        body.classList.add('scroll-down');
+    })
+    window.addEventListener('scroll', function(){
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0){
+            body.classList.remove('scroll-up')
+        }
+        if (currentScroll > lastScroll && !body.classList.contains('scroll-down')){
+            body.classList.remove('scroll-up');
+            body.classList.add('scroll-down');
+        }
+        if (currentScroll < lastScroll && body.classList.contains('scroll-down')){
+            body.classList.remove('scroll-down');
+            body.classList.add('scroll-up');
+        }
+
+        lastScroll = currentScroll;
+    })

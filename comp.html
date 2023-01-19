@@ -13,9 +13,9 @@
 
 <body>
   <div class="bluring"></div>
+  <header class="sticky-top">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 mb-5 flex"
-    style="background-color: #304430;">
+  <nav class="navbar navbar-expand-lg navbar-light p-0 mb-5 flex" style="background-color: #304430;">
     <!-- Container wrapper -->
     <div class="container-fluid p-0" id="divNavbar">
       <!-- Burger -->
@@ -25,18 +25,15 @@
         <div class="burgerMenu responsiveHidden">
           <ul class="responsive" id="ulNavbarResp">
             <li class="">
-              <a class="fc-perso-white" href="#">
-                <bold class="fw-bold">Compétences</bold>
+              <a class="fc-perso-white skillResp" href="#skills">
+                Compétences
               </a>
             </li>
             <li class="">
-              <a class="fc-perso-white" href="#">Parcours Scolaire</a>
+              <a class="fc-perso-white etudeResp" href="#etude">Parcours Scolaire</a>
             </li>
             <li class="">
-              <a class="fc-perso-white" href="#">Diplômes</a>
-            </li>
-            <li class="">
-              <a class=" fc-perso-white" href="#">En savoir plus sur moi..</a>
+              <a class=" fc-perso-white moreResp" href="#">En savoir plus sur moi..</a>
             </li>
           </ul>
         </div>
@@ -57,18 +54,15 @@
         <!-- Left links -->
         <ul class="responsive responsiveHidden">
           <li class="">
-            <a class="fc-perso-white" href="#">
-              <bold class="fw-bold">Compétences</bold>
+            <a class="fc-perso-white skill" href="#skills">
+              Compétences
             </a>
           </li>
           <li class="">
-            <a class="fc-perso-white" href="#">Parcours Scolaire</a>
+            <a class="fc-perso-white etude" href="#etude">Parcours Scolaire</a>
           </li>
           <li class="">
-            <a class="fc-perso-white" href="#">Diplômes</a>
-          </li>
-          <li class="">
-            <a class=" fc-perso-white" href="#">En savoir plus sur moi..</a>
+            <a class=" fc-perso-white more">En savoir plus sur moi..</a>
           </li>
         </ul>
         <!-- Left links -->
@@ -84,6 +78,7 @@
     <!-- Container wrapper -->
   </nav>
   <!-- Navbar -->
+</header>
 
   <main>
     <!--Compétences-->
@@ -112,35 +107,35 @@
       <!-- - -->
 
 
-    <!------------------------------------------>
-    <!--Barre de progression 'skillsBar'-->
-    
+      <!------------------------------------------>
+      <!--Barre de progression 'skillsBar'-->
+
       <div class="flex gap backSkills">
-      <div id="parent">
-        <div id="enfant">
+        <div id="parent">
+          <div id="enfant">
+          </div>
         </div>
-    </div>
-    <div id="parent">
-      <div id="enfant">
+        <div id="parent">
+          <div id="enfant">
+          </div>
+        </div>
+        <div id="parent">
+          <div id="enfant">
+          </div>
+        </div>
+        <div id="parent">
+          <div id="enfant">
+          </div>
+        </div>
+        <div id="parent">
+          <div id="enfant">
+          </div>
+        </div>
+        <div id="parent">
+          <div id="enfant">
+          </div>
+        </div>
       </div>
-  </div>
-  <div id="parent">
-    <div id="enfant">
-    </div>
-</div>
-<div id="parent">
-  <div id="enfant">
-  </div>
-</div>
-<div id="parent">
-  <div id="enfant">
-  </div>
-</div>
-<div id="parent">
-  <div id="enfant">
-  </div>
-</div>
-</div>
     </section>
 
 
@@ -148,49 +143,49 @@
     <a href="https://getbootstrap.com/docs/5.0/utilities/text/" role="button">
       <button type="button">PORTE FOLIO</button>
     </a>
-
-    <div class="container fs-perso center-block">
-      <div class="row">
-        <div class="col-6 text-center">
-          <h2>Etudes</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
-          <p>Collège Général <br> Jean Baptiste-Clément</p>
-        </div>
-        <div class="col-6 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
-          <p>Lycée Général <br> Germaine Tillion</p>
-        </div>
+    <section id="etude">
+      <div class="container fs-perso center-block">
+        <div class="row">
+          <div class="col-6 text-center">
+            <h2>Etudes / Formations / Diplômes</h2>
+          </div>
         </div>
         <div class="row">
-        <div class="col-6 gris-trans text-center fc-perso-white">
-          <i>2014-2019</i>
-        </div>
-        <div class="col-6 gris-trans text-center fc-perso-white">
-          <i>Spécialité : NSI/MATH <br>2019-2022</i>
-        </div>
-      </div>
-
-        <div class="container fs-perso center-block mt-5 forma">
-          <div class="row">
-            <div class="col-6 text-center">
-              <h2>Formations</h2>
-            </div>
+          <div class="col-6 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
+            <p>Collège Général <br> Jean Baptiste-Clément</p>
           </div>
-          <div class="row">
-            <div class="col-12 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
-              <p>La Manu <br>Ecole Supérieure du Numérique</p>
-            </div>
+          <div class="col-6 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
+            <p>Lycée Général <br> Germaine Tillion</p>
           </div>
-          <div class="row">
-            <div class="col-12 gris-trans text-center fc-perso-white">
-              <i>13/08/2022 - 14/04/2023</i>
-            </div>
-            </div>
-            
 
-       
+        </div>
+        <div class="row">
+          <div class="col-6 gris-trans text-center fc-perso-white">
+            <i>2014-2019 <br> <span class="important">Brevet Acquis</span></i>
+          </div>
+          <div class="col-6 gris-trans text-center fc-perso-white">
+            <i>Spécialité : NSI/MATH <br>2019-2022<br><span class="important">BAC Acquis</span></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
+            <hr><p>Formation <br> La Manu - Ecole Supérieure du Numérique</p>
+          </div>
+          <div class="col-6 col-xs-12 text-center fw-bold gris-trans fc-perso-white">
+            <hr><p></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 gris-trans text-center fc-perso-white">
+            <i>13/08/2022 - 14/04/2023<br><span class="important">BAC+2 DEV WEB En cours </span></i>
+          </div>
+          <div class="col-6 gris-trans text-center fc-perso-white">
+            <i></i>
+          </div>
+        </div>
+    </section>
   </main>
 
   <!-- Footer -->

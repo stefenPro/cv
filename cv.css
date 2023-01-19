@@ -26,7 +26,9 @@
     height: 40em;
 }
 
-
+section {
+    margin-top: 5px;
+}
 @keyframes titleReveal {
     from {
         opacity: 0;

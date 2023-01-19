@@ -360,7 +360,13 @@ ul {
 .forma {
     margin: 0;
 }
-
+.important {
+    color: #304430;
+    font-weight: bold;
+}
+.navbar li {
+    cursor: pointer;
+}
 @media screen and (min-width : 994px) {
     #nameTitle {
         display: none;
@@ -379,7 +385,21 @@ ul {
         width: 100%;
     }
 }
+header {
+    transition: all .3s ease-in-out;
+}
 
+/*Scroll*/
+.scroll-down header{
+    transform: translate3d(0, -100%, 0);
+}
+.scroll-up{
+
+}
+
+
+
+/*-----------*/
 @media screen and (max-width : 993px) {
     #divNavbar {
         height: 100px;
