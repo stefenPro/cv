@@ -357,6 +357,10 @@ ul {
   flex-direction: row;
 }
 
+.forma {
+    margin: 0;
+}
+
 @media screen and (min-width : 994px) {
     #nameTitle {
         display: none;
