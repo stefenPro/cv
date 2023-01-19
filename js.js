@@ -98,31 +98,38 @@ function elementPosition (a) {
     }
   }
 /*Variables*/
-var bar = document.querySelectorAll('.skillPourcentage');
-var logos = document.querySelectorAll('.logoSkills');
+var enfants = document.querySelectorAll('#enfant');
+var parents = document.querySelectorAll('#parent');
 var skillsPourcent = [95 , 98 , 70, 60 , 40, 75];
+var skillsPourcentKeys = ('html','css','javascript','php','sql','py')
 var blocs = document.querySelectorAll('.imgBloc');
 var width = 153;
 console.log(width);
 // logos[0].style.width = skillsPourcent[0]+'%';
-var skillsPourcentKeys = ('html','css','javascript','php','sql','py')
 
 
-for (var i=0 ; i<logos.length ; i++){
-    var widthProgress = numberPourcent(skillsPourcent[i],width).toFixed(2);
-    var widthProgressReste = width-widthProgress;
-    var posWidth = elementPosition(blocs[i])['clientX'];
-    var posHeight = elementPosition(blocs[i])['clientY'];
-    
-    console.log('Progression :'+widthProgress);
-    console.log('Progression reste :'+widthProgressReste);
-    bar[i].style.width = + widthProgress+'px';
-    bar[i].style.left = posWidth+'px';
-    bar[i].style.top = posHeight+'px';
-    
+
+for (var i=0 ; i<parents.length ; i++){
+    var pourcent = parseInt(skillsPourcent[i]);
+    if (i==0){
+        parents[i].style.backgroundImage = "url('html-5.png')";
+        enfants[i].style.width = (100-pourcent)+'%';
+    }else if (i==1){
+        parents[i].style.backgroundImage = "url('css-3.png')";
+        enfants[i].style.width = (100-pourcent)+'%';
+    }else if (i==2){
+        parents[i].style.backgroundImage = "url('script-java.png')";
+        enfants[i].style.width = (100-pourcent)+'%';
+    }else if (i==3){
+        parents[i].style.backgroundImage = "url('php.png')";
+        enfants[i].style.width = (100-pourcent)+'%';
+    }else if (i==4){
+        parents[i].style.backgroundImage = "url('base-de-donnees.png')";
+        enfants[i].style.width = (100-pourcent)+'%';
+    }else if (i==5){
+        parents[i].style.backgroundImage = "url('python.png')";
+        enfants[i].style.width = (100-pourcent)+'%';
+}
 }
 
-
 /*--------*/
-
-

@@ -1,18 +1,22 @@
-.marginPerso{
+.marginPerso {
     margin-left: 3em;
 }
+
 .colonne {
     display: flex;
     flex-direction: column;
 }
+
 .colonne i {
-    color : #f1F1F1
+    color: #f1F1F1
 }
-#imgPhoto:hover{
+
+#imgPhoto:hover {
     opacity: 50%;
     transition: all .5s;
 }
-#imgPhoto{
+
+#imgPhoto {
     margin-right: 10px;
     border-radius: 10px;
     width: 150px;
@@ -20,111 +24,127 @@
     transition: all .5s;
 }
 
-body{
+body {
     background-color: #A1E5A2;
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(3px);
 }
-h2{
+
+h2 {
     color: #507251;
     font-weight: bold;
 }
-.fs-perso{
-    font-size: 2em ;
-    
+
+.fs-perso {
+    font-size: 2em;
+
 }
-.margin-auto{
-    margin: auto ;  
+
+.margin-auto {
+    margin: auto;
 }
-.width-perso{
+
+.width-perso {
     width: 1px;
 }
-.gris-trans2{
+
+.gris-trans2 {
     background-color: rgba(0, 0, 0, 0.7);
 }
-.gris-trans{
+
+.gris-trans {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.fc-perso-white{
+.fc-perso-white {
     color: #ffffff
 }
 
 
 
-button{
+button {
     width: 60%;
-    height: 70px ;
+    height: 70px;
     border-radius: 10px;
     transition: -webkit-text-stroke .5s;
-    text-align : center ;
+    text-align: center;
     display: block;
     margin: auto;
     font-weight: bold;
     text-shadow: #010101 1px 0 10px;
     background-color: #597e59;
-    color : white ;
+    color: white;
     margin-top: 100px;
     margin-bottom: 100px;
     font-size: 2em;
     transition: all .5s ease-out;
 }
-a{
+
+a {
     text-decoration: none;
     border-style: none;
     transition: color .5s;
 }
-a:hover{
-    color : #2c8616 ;
+
+a:hover {
+    color: #2c8616;
     transition: color .5s;
 }
+
 button:hover {
-    color : #baecc4 ;
-    text-shadow: black 0px 0px 0px ;
+    color: #baecc4;
+    text-shadow: black 0px 0px 0px;
     -webkit-text-stroke: 1px #010101;
     background-color: rgba(0, 0, 0, 0.2);
     border-style: none;
     transition: all .5s;
 }
-.fs-perso{
+
+.fs-perso {
     font-size: 20px;
 }
-.bg-perso-cyan{
+
+.bg-perso-cyan {
     background-color: #92c4ff;
 }
-#divNavbar{
+
+#divNavbar {
     padding: 10px;
 }
 
-#boutonToggle{
+#boutonToggle {
     background-color: transparent;
     width: 50px;
     height: 50px;
     padding: 0;
     margin: 0;
     font-size: 2rem;
-    color : #f1f1f1 ;
+    color: #f1f1f1;
     border-style: none;
     transition: all .5s;
-    
+
 }
-#boutonToggle:hover{
+
+#boutonToggle:hover {
     width: 60px;
     height: 60px;
 }
-#burgerImg{
+
+#burgerImg {
     width: 50px;
     height: 50px;
     transition: all .5s;
 }
-#burgerImg:hover{
+
+#burgerImg:hover {
     width: 60px;
     height: 60px;
     transition: all .5s;
 }
-#nameTitle{
-    color : white ;
+
+#nameTitle {
+    color: white;
     display: flex;
 }
 
@@ -132,7 +152,7 @@ button:hover {
 
 
 
-.boutonToggle{
+.boutonToggle {
     width: 42px;
     height: 24px;
     background-color: transparent;
@@ -143,194 +163,235 @@ button:hover {
     transition: width .5s;
     transition: height .5s;
 }
-.boutonToggle:hover{ 
+
+.boutonToggle:hover {
     width: 45px;
     height: 35px;
     transition: width .5s;
     transition: height .5s;
 
 }
+
 .boutonToggle span {
     width: 100%;
     height: 4px;
     background-color: white;
     display: block;
     position: absolute;
-    top : 50% ;
+    top: 50%;
     transform: translateY(-50%);
     transition: background-color .5s ease-in-out;
 }
-.boutonToggle span::before , .boutonToggle span::after{
+
+.boutonToggle span::before,
+.boutonToggle span::after {
     content: '';
     position: absolute;
     width: 100%;
     background-color: white;
     height: 4px;
     transition: transform .5s ease-in-out;
-    
+
 }
-.boutonToggle span::before{
+
+.boutonToggle span::before {
     transform: translateY(-10px);
 
 }
-.boutonToggle span::after{
+
+.boutonToggle span::after {
     transform: translateY(10px);
 
 }
-.boutonToggle.active span{
+
+.boutonToggle.active span {
     background-color: transparent;
 }
-.boutonToggle.active span::before{
+
+.boutonToggle.active span::before {
     background-color: #33b916;
     transform: translateY(0px) rotateZ(45deg);
 
 
 }
-.boutonToggle.active span::after{
+
+.boutonToggle.active span::after {
     background-color: #33b916;
     transform: translateY(0px) rotateZ(-45deg);
 
 
 }
 
-ul{
+ul {
     text-decoration: none;
     list-style: none;
     display: flex;
     gap: 30px;
     font-size: 1em;
     align-items: center;
-  justify-content: center;
-  margin-top: 30px;
+    justify-content: center;
+    margin-top: 30px;
 }
-.flex{
+
+.flex {
     width: 100%;
-    display : flex ;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
 }
 
 
-.burgerMenu{
+.burgerMenu {
     position: absolute;
-    left : 0 ;
-    top : 0 ;   
+    left: 0;
+    top: 0;
     height: 840px;
     background-color: #144709;
     border-radius: 7px;
     overflow: hidden;
 
 }
-.burger{
+
+.burger {
     height: 24px;
     width: 42px;
 }
-.navbar .container-fluid{
-    
-    
-   
-}
-#imgPhoto{
-height: 90px;
-width: 130px;
-margin: 0;
-margin-right: 10px;
+
+.navbar .container-fluid {}
+
+#imgPhoto {
+    height: 90px;
+    width: 130px;
+    margin: 0;
+    margin-right: 10px;
 
 }
 
-.logoSkills{
+.logoSkills {
     width: 150px;
     height: 170px;
 }
 
-#skillsBar{
+#skillsBar {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.gap{
+
+.gap {
     gap: 20px;
 }
-.imgBloc{
+
+.imgBloc {
     text-align: center;
     width: 160px;
     height: 180px;
     border-style: solid;
     border-color: black;
 }
-.skillPourcentage{
-    height: 173px; 
+
+.skillPourcentage {
+    height: 173px;
     background-color: #010101;
     opacity: 50%;
     position: absolute;
-    left: 268px ;
+    left: 268px;
     top: 453px;
-    
-    
-}
-.logoSkills{
+
 
 }
-.imgBloc{
+
+.logoSkills {}
+
+.imgBloc {
     background-color: white;
 }
 
+#parent {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-style: solid;
+    border-color: #507251;
+
+}
+
+#enfant {
+    width: 10%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: right;
+
+}
+#skillsBar{
+    display: flex;
+}
 
 @media screen and (min-width : 994px) {
-    #nameTitle{
+    #nameTitle {
         display: none;
     }
-    .boutonToggle{
-        display : none ;
+
+    .boutonToggle {
+        display: none;
     }
-    .burger{
-        display: none ;
+
+    .burger {
+        display: none;
     }
-    #navbarSupportedContent{
+
+    #navbarSupportedContent {
         overflow: hidden;
         width: 100%;
     }
-}   
+}
+
 @media screen and (max-width : 993px) {
-    #divNavbar{
-        height: 100px ;
+    #divNavbar {
+        height: 100px;
     }
-    .responsive{
+
+    .responsive {
         display: flex;
         flex-direction: column;
     }
-    .burgerMenu ul{
+
+    .burgerMenu ul {
         position: inherit;
         text-align: center;
-        top : 150px ;
+        top: 150px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        
+
     }
-    
-    .responsiveHidden{
+
+    .responsiveHidden {
         display: none;
     }
+
     body {
         height: 100%;
     }
-    .blur{
+
+    .blur {
         width: 100%;
-        min-height: 100% ;
-        position: absolute ;
+        min-height: 100%;
+        position: absolute;
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
         transition: all 1s linear;
     }
-    #imgPhoto{
+
+    #imgPhoto {
         height: 90px;
         width: 100px;
         margin-left: 30px;
-        
-        }
-    h2{
+
+    }
+
+    h2 {
         font-size: 1.2em;
     }
 }
