@@ -32,8 +32,10 @@ body {
 }
 
 h2 {
-    color: #507251;
+    color: white;
     font-weight: bold;
+    background-color: #304430;
+    margin: 0;
 }
 
 .fs-perso {
@@ -352,6 +354,7 @@ ul {
     margin-bottom: 0;
     align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 @media screen and (min-width : 994px) {
@@ -427,5 +430,9 @@ ul {
     }
     .para1 p {
         font-size: .9em;
+    }
+    .backSkills{
+        width: 90%;
+        margin: 5%;
     }
 }
