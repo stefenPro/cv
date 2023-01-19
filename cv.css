@@ -19,6 +19,13 @@
     animation: titleReveal .7s both;
 
 }
+.background{
+    background-image: url('epona.jpg');
+    background-size: 300vh;
+    background-repeat: no-repeat;
+    height: 40em;
+}
+
 
 @keyframes titleReveal {
     from {
@@ -30,4 +37,10 @@
         transform: translateY(0);
     }
 }
+@media screen and (max-width : 439px){
+    .mask{
+        height: 400px;
+    }
+}
+
 
