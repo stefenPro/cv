@@ -25,16 +25,16 @@
 }
 
 body {
-    background-color: #A1E5A2;
+    background-color: #aa375e;
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(3px);
 }
 
-h2 {
+main h2 {
     color: white;
     font-weight: bold;
-    background-color: #304430;
+    background-color: #431524;
     margin: 0;
 }
 
@@ -56,7 +56,7 @@ h2 {
 }
 
 .gris-trans {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #762641
 }
 
 .fc-perso-white {
@@ -75,7 +75,7 @@ button {
     margin: auto;
     font-weight: bold;
     text-shadow: #010101 1px 0 10px;
-    background-color: #597e59;
+    background-color: #ff5175;
     color: white;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -90,7 +90,7 @@ a {
 }
 
 a:hover {
-    color: #2c8616;
+    color: #aa375e;
     transition: color .5s;
 }
 
@@ -111,7 +111,7 @@ button:hover {
     background-color: #92c4ff;
 }
 
-#divNavbar {
+#divgrisTr {
     padding: 10px;
 }
 .navbar {
@@ -217,14 +217,14 @@ box-shadow: 0px 6px 5px 3px #000;
 }
 
 .boutonToggle.active span::before {
-    background-color: #33b916;
+    background-color: #aa375e;
     transform: translateY(0px) rotateZ(45deg);
 
 
 }
 
 .boutonToggle.active span::after {
-    background-color: #33b916;
+    background-color: #aa375e;
     transform: translateY(0px) rotateZ(-45deg);
 
 
@@ -255,7 +255,7 @@ ul {
     left: 0;
     top: 0;
     height: 840px;
-    background-color: #144709;
+    background-color: #431524;
     border-radius: 7px;
     overflow: hidden;
 
@@ -316,14 +316,48 @@ ul {
     background-color: white;
 }
 
-#parent {
+.parent {
     width: 100px;
     height: 100px;
     background-size: cover;
     border-style: solid;
-    border-color: #507251;
-
+    border-color: #762641;
+    cursor: pointer;
 }
+/*Menu Skills*/
+.menuSkills {
+    height: 0px;
+    width: 55%;
+    margin: 23%;
+    margin-top: 10px;
+    background-color: #762641;
+}
+.menuDesactive {
+    display: none;
+}
+
+/**/
+/*SKILLS IMG*/
+#html {
+    background-image: url(html-5.png);
+}
+#css {
+    background-image: url(css-3.png);
+}
+#javascript {
+    background-image: url(script-java.png);
+}
+#sql {
+    background-image: url(base-de-donnees.png);
+}
+#php {
+    background-image: url(php.png);
+}
+#python {
+    background-image: url(python.png);
+}
+
+/*----------*/
 
 #enfant {
     width: 10%;
@@ -346,7 +380,7 @@ ul {
     font-size: 1.5em;
 }
 .backSkills {
-    background-color: #7db27d;
+    background-color: #551b2f;
     padding: 10px;
     width: 55%;
     margin: 23%;
@@ -361,11 +395,87 @@ ul {
     margin: 0;
 }
 .important {
-    color: #304430;
+    color: #d04373;
     font-weight: bold;
 }
 .navbar li {
     cursor: pointer;
+}
+.contact h2 {
+    text-align: center ;
+    font-size: 3.5rem;
+}
+.contact {
+    display: flex;
+}
+.arrow-box {
+
+}
+.arrow-right {
+    width: 10%;
+    background-color: white;
+    height: 4px;
+    margin-left :30% ;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+}
+.arrow-right::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(45deg);
+    right: -6px;
+    bottom: 13px;
+    border-radius: 5px;
+}
+.arrow-right::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -6px;
+    bottom: -13px;
+    border-radius: 5px;
+}
+
+.arrow-left {
+    width: 10%;
+    background-color: white;
+    height: 4px;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+}
+.arrow-left::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 0px;
+    bottom: 13px;
+    border-radius: 5px;
+}
+.arrow-left::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 0px;
+    bottom: -13px;
+    border-radius: 5px;
 }
 @media screen and (min-width : 994px) {
     #nameTitle {

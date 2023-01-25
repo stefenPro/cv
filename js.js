@@ -48,7 +48,7 @@ window.addEventListener('scroll', function () {
 var skillResp = document.querySelector('.skillResp')
 var etudeResp = document.querySelector('.etudeResp')
 var moreResp = document.querySelector('.moreResp')
-skillResp.addEventListener('click',function(){
+skillResp.addEventListener('click', function () {
     $(".burgerMenu").animate({ width: '1%' }, 500, function () {
         $(".burgerMenu").removeAttr('style');
         burger.classList.toggle('responsiveHidden');
@@ -56,7 +56,7 @@ skillResp.addEventListener('click',function(){
         boutonToggle.classList.toggle('active');
     });
 })
-etudeResp.addEventListener('click',function(){
+etudeResp.addEventListener('click', function () {
     $(".burgerMenu").animate({ width: '1%' }, 500, function () {
         $(".burgerMenu").removeAttr('style');
         burger.classList.toggle('responsiveHidden');
@@ -64,7 +64,7 @@ etudeResp.addEventListener('click',function(){
         boutonToggle.classList.toggle('active');
     });
 })
-moreResp.addEventListener('click',function(){
+moreResp.addEventListener('click', function () {
     $(".burgerMenu").animate({ width: '1%' }, 500, function () {
         $(".burgerMenu").removeAttr('style');
         burger.classList.toggle('responsiveHidden');
@@ -113,112 +113,25 @@ boutonToggle.addEventListener('click', function () {
 /*---------------------------------*/
 
 /*Progress Bar*/
-/*fonctions*/
-function numberPourcent(pourcent, number) {
-    var res = (pourcent * number) / 100;
-    return res;
+var logoSkills = document.querySelectorAll('.parent');
+var menuSkills = document.querySelector('.menuSkills');
+for (let p of logoSkills ) {
+    p.addEventListener('mouseover', function () {
+        if (menuSkills.classList.contains('menuDesactive') == true) {
+            menuSkills.classList.toggle('menuDesactive');
+            $('.menuSkills').animate({ height: '500px' }, 500);
+            
+        }
+        p.addEventListener('mouseleave', function () {
+            $('.menuSkills').animate({ height: '1px' }, 500, function(){
+                menuSkills.classList.toggle('menuDesactive');
+                $(".menuSkills").removeAttr('style');
+            });
+            
+        })  
+    })
 }
-function elementPosition(a) {
-    var b = a.getBoundingClientRect();
-    return {
-        clientX: a.offsetLeft,
-        clientY: a.offsetTop,
-        viewportX: (b.x || b.left),
-        viewportY: (b.y || b.top)
-    }
-}
-/*Variables*/
-var enfants = document.querySelectorAll('#enfant');
-var parents = document.querySelectorAll('#parent');
-var skillsPourcent = [95, 98, 70, 60, 40, 75];
-var skillsPourcentKeys = ('html', 'css', 'javascript', 'php', 'sql', 'py')
-var blocs = document.querySelectorAll('.imgBloc');
-var width = 153;
-console.log(width);
-// logos[0].style.width = skillsPourcent[0]+'%';
-
-
-
-for (var i = 0; i < parents.length; i++) {
-    var pourcent = parseInt(skillsPourcent[i]);
-    if (i == 0) {
-        parents[i].style.backgroundImage = "url('html-5.png')";
-        enfants[i].style.width = (pourcent) + '%';
-    } else if (i == 1) {
-        parents[i].style.backgroundImage = "url('css-3.png')";
-        enfants[i].style.width = (pourcent) + '%';
-    } else if (i == 2) {
-        parents[i].style.backgroundImage = "url('script-java.png')";
-        enfants[i].style.width = (pourcent) + '%';
-    } else if (i == 3) {
-        parents[i].style.backgroundImage = "url('php.png')";
-        enfants[i].style.width = (pourcent) + '%';
-    } else if (i == 4) {
-        parents[i].style.backgroundImage = "url('base-de-donnees.png')";
-        enfants[i].style.width = (pourcent) + '%';
-    } else if (i == 5) {
-        parents[i].style.backgroundImage = "url('python.png')";
-        enfants[i].style.width = (pourcent) + '%';
-    }
-}
-
-/*--------*/
-
-/*Skills Hover*/
-console.log(enfants[1])
-for (var i = 0; i < parents.length; i++) {
-    var pourcent = parseInt(skillsPourcent[i]);
-    if (i == 0) {
-        enfants[0].addEventListener('mouseover', function () {
-            enfants[0].innerHTML = skillsPourcent[0] + '%'
-        })
-        enfants[0].addEventListener('mouseleave', function () {
-            enfants[0].innerHTML = ''
-        })
-
-    } else if (i == 1) {
-        enfants[1].addEventListener('mouseover', function () {
-            enfants[1].innerHTML = skillsPourcent[1] + '%'
-        })
-        enfants[1].addEventListener('mouseleave', function () {
-            enfants[1].innerHTML = ''
-        })
-    } else if (i == 2) {
-        enfants[2].addEventListener('mouseover', function () {
-            enfants[2].innerHTML = skillsPourcent[2] + '%'
-        })
-        enfants[2].addEventListener('mouseleave', function () {
-            enfants[2].innerHTML = ''
-        })
-
-    } else if (i == 3) {
-        enfants[3].addEventListener('mouseover', function () {
-            enfants[3].innerHTML = skillsPourcent[3] + '%'
-        })
-        enfants[3].addEventListener('mouseleave', function () {
-            enfants[3].innerHTML = ''
-        })
-
-    } else if (i == 4) {
-        enfants[4].addEventListener('mouseover', function () {
-            enfants[4].innerHTML = skillsPourcent[4] + '%'
-        })
-        enfants[4].addEventListener('mouseleave', function () {
-            enfants[4].innerHTML = ''
-        })
-
-    } else if (i == 5) {
-        enfants[5].addEventListener('mouseover', function () {
-            enfants[5].innerHTML = skillsPourcent[5] + '%'
-        })
-        enfants[5].addEventListener('mouseleave', function () {
-            enfants[5].innerHTML = ''
-        })
-
-    }
-}
-
-/*----------*/
+/*-----------*/
 /*Navbar*/
 
 /*variables*/
@@ -273,25 +186,25 @@ window.addEventListener('scroll', function () {
 //resp  
 var burgerMenu = document.querySelector('.burgerMenu')
 
-if (burgerMenu.classList.contains('responsiveHidden') == true) {  
-    console.log('non')     
-    }else{
-        console.log('oui')
-        burgerMenu.addEventListener('click', function (e) {
-            var update = 1;
-            console.log('click')
-        })
-        document.addEventListener('click', function (){
-            if (typeof (update) != 'undefined' && update == 1) {
-    
-    
-            } else {
-                console.log('cliqué');
-                // $(".burgerMenu").animate({width: '1%'},500,function(){
-                //     $(".burgerMenu").removeAttr('style') ;
-                //     burger.classList.toggle('responsiveHidden') ;
-    
-            }
-        })
-    }
+if (burgerMenu.classList.contains('responsiveHidden') == true) {
+    console.log('non')
+} else {
+    console.log('oui')
+    burgerMenu.addEventListener('click', function (e) {
+        var update = 1;
+        console.log('click')
+    })
+    document.addEventListener('click', function () {
+        if (typeof (update) != 'undefined' && update == 1) {
+
+
+        } else {
+            console.log('cliqué');
+            // $(".burgerMenu").animate({width: '1%'},500,function(){
+            //     $(".burgerMenu").removeAttr('style') ;
+            //     burger.classList.toggle('responsiveHidden') ;
+
+        }
+    })
+}
 
