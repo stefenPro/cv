@@ -338,22 +338,22 @@ ul {
 /**/
 /*SKILLS IMG*/
 #html {
-    background-image: url(html-5.png);
+    background-image: url(assets/images/html-5.png);
 }
 #css {
-    background-image: url(css-3.png);
+    background-image: url(assets/images/css-3.png);
 }
 #javascript {
-    background-image: url(script-java.png);
+    background-image: url(assets/images/script-java.png);
 }
 #sql {
-    background-image: url(base-de-donnees.png);
+    background-image: url(assets/images/base-de-donnees.png);
 }
 #php {
-    background-image: url(php.png);
+    background-image: url(assets/images/php.png);
 }
 #python {
-    background-image: url(python.png);
+    background-image: url(assets/images/python.png);
 }
 
 /*----------*/
@@ -403,7 +403,7 @@ ul {
 .contact h2 {
     background-color: transparent;
     text-align: center ;
-    font-size: 3rem;
+    font-size: 2rem;
     transition: all 5s;
     -webkit-text-stroke: 2px #762641;
     padding: 20px;
@@ -494,6 +494,16 @@ form .mainInput {
     width: 80px;
     height: 80px;
 }
+.diplLogo {
+    width: 80px;
+    height: 80px;
+}
+.paddingBot{
+    padding-bottom: 10px;
+}
+.paddingTop{
+    padding-top: 10px;
+}
 @media screen and (min-width : 994px) {
     #nameTitle {
         display: none;
@@ -571,9 +581,7 @@ header {
 
     }
 
-    h2 {
-        font-size: 1.2em;
-    }
+    
 }
 @media screen and (max-width : 498px){
     .forH2 h2 , .efd h2{
@@ -591,9 +599,13 @@ header {
         height: 40px;
     }
 }
-@media screen and (max-width : 418px){
+@media screen and (max-width : 426px){
     #folioButton {
         font-size: 20px;
+    }
+    .diplLogo {
+        width: 50px;
+        height: 50px;
     }
 }
 
