@@ -211,33 +211,31 @@ if (burgerMenu.classList.contains('responsiveHidden') == true) {
 var form = document.querySelector('.formul');
 var contactButton = document.querySelector('.contact');
 var arrow = document.querySelectorAll('.logoArrow');
-console.log(arrow[1])
 contactButton.addEventListener('click',function(){
-    $(".formul").removeAttr('style');
-    if (form.classList.contains('menuDesative')==false){
-        form.classList.toggle('menuDesactive');
-        arrow[0].classList.toggle('rotate');
+    contactButton.classList.toggle('magentaToggle');
+    arrow[0].classList.toggle('rotate');
         arrow[1].classList.toggle('rotateRight');
         arrow[1].classList.toggle('arrowRight');
-        contactButton.classList.toggle('magentaToggle');
-        $('.formul').animate({ height: '1000px' }, 500,function(){
-            contactButton.addEventListener('click',function(){
-                $(".formul").removeAttr('style');
-            })
-        })
+    if (form.classList.contains('menuDesactive')==true){
+        form.classList.toggle('menuDesactive');
         
-    }else {
+        
+        $('.formul').animate({ height: '1000px' }, 500)
+    }else if(form.classList.contains('menuDesactive')==false) {
+        console.log('else')
         $('.formul').animate({ height: '1px' }, 500,function(){
             $(".formul").removeAttr('style');
             form.classList.toggle('menuDesactive');
             
             
+            
         })   
     }
-    $(".formul").removeAttr('style');
+   
 })
 var mainInput = document.querySelector('.mainInput');
 var submitContactButton = document.querySelector('.submitContact');
+var objectMail = document.querySelector('objectMail');
 submitContactButton.addEventListener('click',function(e){
     e.preventDefault();
     console.log(mainInput.value)

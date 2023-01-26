@@ -461,6 +461,7 @@ form {
     height: 1px;
     padding: 0;
     padding-top: 3%;
+    overflow: hidden;
 }
 form label {
     align-self: flex-start;
