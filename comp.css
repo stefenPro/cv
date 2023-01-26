@@ -490,6 +490,10 @@ form .mainInput {
     rotate: 90deg;
     transition: rotate .5s;
 }
+#pp {
+    width: 80px;
+    height: 80px;
+}
 @media screen and (min-width : 994px) {
     #nameTitle {
         display: none;
@@ -571,7 +575,7 @@ header {
         font-size: 1.2em;
     }
 }
-@media screen and (max-width : 458px){
+@media screen and (max-width : 498px){
     .forH2 h2 , .efd h2{
         font-size: 1em;
     }
@@ -582,4 +586,14 @@ header {
         width: 90%;
         margin: 5%;
     }
+    #pp {
+        width: 40px;
+        height: 40px;
+    }
 }
+@media screen and (max-width : 418px){
+    #folioButton {
+        font-size: 20px;
+    }
+}
+
