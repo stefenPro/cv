@@ -25,7 +25,7 @@
 }
 
 body {
-    background-color: #aa375e;
+    background-color: #5e1e34;
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(3px);
@@ -75,7 +75,7 @@ button {
     margin: auto;
     font-weight: bold;
     text-shadow: #010101 1px 0 10px;
-    background-color: #ff5175;
+    background-color: #8f2d43;
     color: white;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -95,9 +95,8 @@ a:hover {
 }
 
 button:hover {
-    color: #baecc4;
+    color: #ff5174;
     text-shadow: black 0px 0px 0px;
-    -webkit-text-stroke: 1px #010101;
     background-color: rgba(0, 0, 0, 0.2);
     border-style: none;
     transition: all .5s;
@@ -402,80 +401,93 @@ ul {
     cursor: pointer;
 }
 .contact h2 {
+    background-color: transparent;
     text-align: center ;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    transition: all 5s;
+    -webkit-text-stroke: 2px #762641;
+    padding: 20px;
+    transition: padding .5s;
+    
+}
+.contact:hover {
+    transition: all .5s;
+    background-color: #762641;
+   
+
+}
+.contact h2:hover {
+    padding: 0px;
+    transition: padding .5s;
 }
 .contact {
     display: flex;
-}
-.arrow-box {
-
-}
-.arrow-right {
-    width: 10%;
-    background-color: white;
-    height: 4px;
-    margin-left :30% ;
-    border-radius: 5px;
-    position: relative;
-    top: 10px;
-}
-.arrow-right::after {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 4px;
-    background-color: white;
-    position: absolute;
-    transform: rotate(45deg);
-    right: -6px;
-    bottom: 13px;
-    border-radius: 5px;
-}
-.arrow-right::before {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 4px;
-    background-color: white;
-    position: absolute;
-    transform: rotate(-45deg);
-    right: -6px;
-    bottom: -13px;
-    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #8f2d43;
+    margin-top: 5%;
+    transition: all .5s;
+    -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+cursor: pointer;
 }
 
-.arrow-left {
-    width: 10%;
-    background-color: white;
-    height: 4px;
-    border-radius: 5px;
-    position: relative;
-    top: 10px;
+.arrowRight {
+    rotate: 180deg;
+    transition: rotate .5s;
 }
-.arrow-left::after {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 4px;
-    background-color: white;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 0px;
-    bottom: 13px;
-    border-radius: 5px;
+.logoArrow {
+    width: 50px;
+    height: 50px;
+    transition: rotate .5s; 
 }
-.arrow-left::before {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 4px;
-    background-color: white;
-    position: absolute;
-    transform: rotate(45deg);
-    left: 0px;
-    bottom: -13px;
-    border-radius: 5px;
+.rotateRight {
+    rotate: 90deg;
+    transition: rotate .5s;
+}
+.magentaToggle {
+    background-color: #762641;
+}
+form {
+    display: flex ;
+    flex-direction: column;
+    color :white ;
+    background-color: #762641;
+    align-items: center;
+    height: 1px;
+    padding: 0;
+    padding-top: 3%;
+}
+form label {
+    align-self: flex-start;
+    margin-left: 20%;
+    font-size: 1.5rem;
+}
+form #objectMail {
+    width: 20%;
+    margin-left: 20%;
+    align-self: flex-start;
+}
+form #mail {
+    width: 20%;
+    margin-left: 20%;
+    align-self: flex-start;
+}
+form input {
+    width: 60%;
+    height: 10%;
+}
+form .mainInput {   
+    width: 60%;
+    height: 500px;
+}
+.rotate {
+    rotate: 90deg;
+    transition: rotate .5s;
 }
 @media screen and (min-width : 994px) {
     #nameTitle {
