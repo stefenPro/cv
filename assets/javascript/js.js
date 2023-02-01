@@ -41,9 +41,7 @@ boutonToggle.addEventListener('click', function () {
     navbarOptions.classList.toggle('responsive');
 })
 
-window.addEventListener('scroll', function () {
-    console.log('scroll')
-})
+
 /*Responsive*/
 var skillResp = document.querySelector('.skillResp')
 var etudeResp = document.querySelector('.etudeResp')
@@ -112,26 +110,20 @@ boutonToggle.addEventListener('click', function () {
 /*---------------------------------*/
 
 /*Progress Bar*/
-var logoSkills = document.querySelectorAll('.parent');
-var menuSkills = document.querySelector('.menuSkills');
-for (let p of logoSkills ) {
-    p.addEventListener('mouseover', function () {
-        if (menuSkills.classList.contains('menuDesactive') == true) {
-            menuSkills.classList.toggle('menuDesactive');
-            $('.menuSkills').animate({ height: '500px' }, 500);
-            
-        }
-        p.addEventListener('mouseleave', function () {
-            $('.menuSkills').animate({ height: '1px' }, 500, function(){
-                menuSkills.classList.toggle('menuDesactive');
-                $(".menuSkills").removeAttr('style');
-            });
-            
-        })  
-    })
+var skills = document.querySelectorAll('.logoSkill');
+for (var skilled=0 ; skilled<skills.length ; skilled++){
+    
+    skills[skilled].addEventListener('click',function(){
+        console.log(skilled);
+        
+        
+})
+
 }
+
+
 /*-----------*/
-/*Navbar*/
+/*Header dissipear when scroll down*/
 
 /*variables*/
 var skill = document.querySelector('.skill');
@@ -139,7 +131,7 @@ var etude = document.querySelector('.etude');
 var lastScroll = 0;
 var verify = false;
 var body = document.body;
-console.log(verify)
+
 
 
 /*code*/
@@ -149,7 +141,7 @@ skill.addEventListener('click', function () {
         body.classList.remove('scroll-up');
         body.classList.add('scroll-down');
     }
-    console.log(verify)
+    
 
 
 })
@@ -176,7 +168,7 @@ window.addEventListener('scroll', function () {
     if (currentScroll < lastScroll && body.classList.contains('scroll-down') && !verify) {
         body.classList.remove('scroll-down');
         body.classList.add('scroll-up');
-        console.log(verify)
+       
     }
 
     lastScroll = currentScroll;
@@ -186,24 +178,18 @@ window.addEventListener('scroll', function () {
 var burgerMenu = document.querySelector('.burgerMenu')
 
 if (burgerMenu.classList.contains('responsiveHidden') == true) {
-    console.log('non')
+    
 } else {
-    console.log('oui')
+
     burgerMenu.addEventListener('click', function (e) {
         var update = 1;
-        console.log('click')
+       
     })
     document.addEventListener('click', function () {
         if (typeof (update) != 'undefined' && update == 1) {
 
 
-        } else {
-            console.log('cliqué');
-            // $(".burgerMenu").animate({width: '1%'},500,function(){
-            //     $(".burgerMenu").removeAttr('style') ;
-            //     burger.classList.toggle('responsiveHidden') ;
-
-        }
+        } 
     })
 }
 
@@ -211,18 +197,16 @@ if (burgerMenu.classList.contains('responsiveHidden') == true) {
 var form = document.querySelector('.formul');
 var contactButton = document.querySelector('.contact');
 var arrow = document.querySelectorAll('.logoArrow');
+var signalProblem = document.querySelector('.signalAlert')
 contactButton.addEventListener('click',function(){
-    contactButton.classList.toggle('magentaToggle');
-    arrow[0].classList.toggle('rotate');
+        contactButton.classList.toggle('magentaToggle');
+        arrow[0].classList.toggle('rotate');
         arrow[1].classList.toggle('rotateRight');
         arrow[1].classList.toggle('arrowRight');
     if (form.classList.contains('menuDesactive')==true){
         form.classList.toggle('menuDesactive');
-        
-        
         $('.formul').animate({ height: '1000px' }, 500)
     }else if(form.classList.contains('menuDesactive')==false) {
-        console.log('else')
         $('.formul').animate({ height: '1px' }, 500,function(){
             $(".formul").removeAttr('style');
             form.classList.toggle('menuDesactive');
@@ -233,10 +217,20 @@ contactButton.addEventListener('click',function(){
     }
    
 })
+
+signalProblem.addEventListener('click',function(){
+    if (form.classList.contains('menuDesactive')){
+        form.classList.toggle('menuDesactive');
+        $('.formul').animate({ height: '1000px' }, 500);
+        contactButton.classList.toggle('magentaToggle');
+        arrow[0].classList.toggle('rotate');
+        arrow[1].classList.toggle('rotateRight');
+        arrow[1].classList.toggle('arrowRight');
+    }
+})
 var mainInput = document.querySelector('.mainInput');
 var submitContactButton = document.querySelector('.submitContact');
 var objectMail = document.querySelector('objectMail');
 submitContactButton.addEventListener('click',function(e){
     e.preventDefault();
-    console.log(mainInput.value)
 })

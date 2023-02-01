@@ -1,0 +1,834 @@
+.marginPerso{
+    margin-top: 4em;
+
+}
+#imgPhotoMain{
+    margin-top: 15px;
+    margin-left: 1em;
+    height: 175px;
+    width: 230px;
+    filter: drop-shadow(-4px 4px 2px black);
+
+}
+
+.title span {
+    display: inline-block;
+    overflow: hidden ;
+}
+.title span span {
+    animation: titleReveal .7s both;
+
+}
+.background{
+    background-image: url('../images/epona.jpg');
+    background-size: 300vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.reinitialise{
+    animation : none;
+    animation-delay : 0;
+    animation-direction : normal;
+    animation-duration : 0;
+    animation-fill-mode : none;
+    animation-iteration-count : 1;
+    animation-name : none;
+    animation-play-state : running;
+    animation-timing-function : ease;
+    backface-visibility : visible;
+    background : 0;
+    background-attachment : scroll;
+    background-clip : border-box;
+    background-color : transparent;
+    background-image : none;
+    background-origin : padding-box;
+    background-position : 0 0;
+    background-position-x : 0;
+    background-position-y : 0;
+    background-repeat : repeat;
+    background-size : auto auto;
+    border : 0;
+    border-style : none;
+    border-width : medium;
+    border-color : inherit;
+    border-bottom : 0;
+    border-bottom-color : inherit;
+    border-bottom-left-radius : 0;
+    border-bottom-right-radius : 0;
+    border-bottom-style : none;
+    border-bottom-width : medium;
+    border-collapse : separate;
+    border-image : none;
+    border-left : 0;
+    border-left-color : inherit;
+    border-left-style : none;
+    border-left-width : medium;
+    border-radius : 0;
+    border-right : 0;
+    border-right-color : inherit;
+    border-right-style : none;
+    border-right-width : medium;
+    border-spacing : 0;
+    border-top : 0;
+    border-top-color : inherit;
+    border-top-left-radius : 0;
+    border-top-right-radius : 0;
+    border-top-style : none;
+    border-top-width : medium;
+    bottom : auto;
+    box-shadow : none;
+    box-sizing : content-box;
+    caption-side : top;
+    clear : none;
+    clip : auto;
+    color : inherit;
+    columns : auto;
+    column-count : auto;
+    column-fill : balance;
+    column-gap : normal;
+    column-rule : medium none currentColor;
+    column-rule-color : currentColor;
+    column-rule-style : none;
+    column-rule-width : none;
+    column-span : 1;
+    column-width : auto;
+    content : normal;
+    counter-increment : none;
+    counter-reset : none;
+    cursor : auto;
+    direction : ltr;
+    display : inline;
+    empty-cells : show;
+    float : none;
+    font : normal;
+    font-family : inherit;
+    font-size : medium;
+    font-style : normal;
+    font-variant : normal;
+    font-weight : normal;
+    height : auto;
+    hyphens : none;
+    left : auto;
+    letter-spacing : normal;
+    line-height : normal;
+    list-style : none;
+    list-style-image : none;
+    list-style-position : outside;
+    list-style-type : disc;
+    margin : 0;
+    margin-bottom : 0;
+    margin-left : 0;
+    margin-right : 0;
+    margin-top : 0;
+    max-height : none;
+    max-width : none;
+    min-height : 0;
+    min-width : 0;
+    opacity : 1;
+    orphans : 0;
+    outline : 0;
+    outline-color : invert;
+    outline-style : none;
+    outline-width : medium;
+    overflow : visible;
+    overflow-x : visible;
+    overflow-y : visible;
+    padding : 0;
+    padding-bottom : 0;
+    padding-left : 0;
+    padding-right : 0;
+    padding-top : 0;
+    page-break-after : auto;
+    page-break-before : auto;
+    page-break-inside : auto;
+    perspective : none;
+    perspective-origin : 50% 50%;
+    position : static;
+    /* Vous devrez modifier les quotes selon le langage de la page (ici il s'agit du Langage Français) */
+    quotes : '201C' '201D' '2018' '2019';
+    right : auto;
+    tab-size : 8;
+    table-layout : auto;
+    text-align : inherit;
+    text-align-last : auto;
+    text-decoration : none;
+    text-decoration-color : inherit;
+    text-decoration-line : none;
+    text-decoration-style : solid;
+    text-indent : 0;
+    text-shadow : none;
+    text-transform : none;
+    top : auto;
+    transform : none;
+    transform-style : flat;
+    transition : none;
+    transition-delay : 0s;
+    transition-duration : 0s;
+    transition-property : none;
+    transition-timing-function : ease;
+    unicode-bidi : normal;
+    vertical-align : baseline;
+    visibility : visible;
+    white-space : normal;
+    widows : 0;
+    width : auto;
+    word-spacing : normal;
+    z-index : auto;
+    }
+.modal-content {
+    
+
+}
+.buttonHTML {
+   
+    background-image: url('../images/html-5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonCSS {
+    background-image: url('../images/css-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonJS{
+    background-image: url('../images/js.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonSQL{
+    background-image: url('../images/base-de-donnees.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonPHP{
+    background-image: url('../images/php.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonPY{
+    background-image: url('../images/python.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonModal {
+    width: 100px;
+    height: 100px;
+    transition: all .5s;
+}
+.buttonModal:hover{
+    background-color: #762641;
+    transition: all .5s;
+}
+.modal .modal-body ul {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap : 2px;
+}
+#skills .modal-content {
+    background-color: #38121f;
+}
+#skills .btn-close {
+    background-color: #762641;
+}
+#skills .modal {
+    color: #f1F1F1
+}
+#skills .modal-dialog{
+    margin-top: 15%;
+   
+}
+.modal-body h5 {
+    margin-top: 20px;
+}
+.logoframe {
+    width: 90px;
+    height: 90px;
+}
+.ulFrames {
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+}
+.marginPerso {
+    margin-left: 3em;
+}
+
+.bold {
+ font-weight: bold;
+}
+.colonne {
+    display: flex;
+    flex-direction: column;
+}
+
+.colonne i {
+    color: #f1F1F1
+}
+
+#imgPhoto:hover {
+    opacity: 50%;
+    transition: all .5s;
+}
+
+#imgPhoto {
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    transition: all .5s;
+}
+
+body {
+    background-color: #5e1e34;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    margin: 0;
+    padding: 0;
+}
+
+main h2 {
+    color: white;
+    font-weight: bold;
+    background-color: #431524;
+    margin: 0;
+}
+
+.fs-perso {
+    font-size: 2em;
+
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.width-perso {
+    width: 1px;
+}
+
+.gris-trans2 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gris-trans {
+    background-color: #762641
+}
+
+.fc-perso-white {
+    color: #ffffff
+}
+
+
+
+button {
+    width: 60%;
+    height: 70px;
+    border-radius: 10px;
+    transition: -webkit-text-stroke .5s;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    text-shadow: #010101 1px 0 10px;
+    background-color: #8f2d43;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 2em;
+    transition: all .5s ease-out;
+}
+
+a {
+    text-decoration: none;
+    border-style: none;
+    transition: color .5s;
+}
+
+a:hover {
+    color: #aa375e;
+    transition: color .5s;
+}
+
+button:hover {
+    color: #ff5174;
+    text-shadow: black 0px 0px 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-style: none;
+    transition: all .5s;
+}
+
+.fs-perso {
+    font-size: 20px;
+}
+
+.bg-perso-cyan {
+    background-color: #92c4ff;
+}
+
+#divgrisTr {
+    padding: 10px;
+}
+.navbar {
+    -webkit-box-shadow: 0px 6px 5px 3px #000;
+    -moz-box-shadow: 0px 6px 5px 3px #000;
+
+box-shadow: 0px 6px 5px 3px #000;
+}
+
+#boutonToggle {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    color: #f1f1f1;
+    border-style: none;
+    transition: all .5s;
+
+}
+
+#boutonToggle:hover {
+    width: 60px;
+    height: 60px;
+}
+
+#burgerImg {
+    width: 50px;
+    height: 50px;
+    transition: all .5s;
+}
+
+#burgerImg:hover {
+    width: 60px;
+    height: 60px;
+    transition: all .5s;
+}
+
+#nameTitle {
+    color: white;
+    display: flex;
+}
+.boutonToggle {
+    width: 42px;
+    height: 24px;
+    background-color: transparent;
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+    transition: width .5s;
+    transition: height .5s;
+}
+
+.boutonToggle:hover {
+    width: 45px;
+    height: 35px;
+    transition: width .5s;
+    transition: height .5s;
+
+}
+
+.boutonToggle span {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .5s ease-in-out;
+}
+
+.boutonToggle span::before,
+.boutonToggle span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: 4px;
+    transition: transform .5s ease-in-out;
+
+}
+
+.boutonToggle span::before {
+    transform: translateY(-10px);
+
+}
+
+.boutonToggle span::after {
+    transform: translateY(10px);
+
+}
+
+.boutonToggle.active span {
+    background-color: transparent;
+}
+
+.boutonToggle.active span::before {
+    background-color: #aa375e;
+    transform: translateY(0px) rotateZ(45deg);
+
+
+}
+
+.boutonToggle.active span::after {
+    background-color: #aa375e;
+    transform: translateY(0px) rotateZ(-45deg);
+
+
+}
+
+header ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.burgerMenu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 840px;
+    background-color: #431524;
+    border-radius: 7px;
+    overflow: hidden;
+
+}
+
+.burger {
+    height: 24px;
+    width: 42px;
+}
+
+.navbar .container-fluid {}
+
+#imgPhoto {
+    height: 90px;
+    width: 130px;
+    margin: 0;
+    margin-right: 10px;
+
+}
+
+.logoSkills {
+    width: 150px;
+    height: 170px;
+    transition: all .5s;
+}
+
+#skillsBar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.imgBloc {
+    text-align: center;
+    width: 160px;
+    height: 180px;
+    border-style: solid;
+    border-color: black;
+}
+
+.skillPourcentage {
+    height: 173px;
+    background-color: #010101;
+    opacity: 50%;
+    position: absolute;
+    left: 268px;
+    top: 453px;
+
+
+}
+
+.logoSkill {
+    width: 100px;
+    height: 100px;
+}
+
+.imgBloc {
+    background-color: white;
+}
+
+
+.logoHover {
+    position: fixed;
+    width: 600px;
+    height: 500px;
+    background-color: #431524;
+    border-radius: 10px;
+    transition: all .5s;
+}
+.menuDesactive {
+    display: none;
+}
+.para1 p {
+    font-size: 1.5em;
+}
+.backSkills {
+    background-color: #551b2f;
+    padding: 10px;
+    width: 80%;
+    margin: 10%;
+    margin-top : 0 ;
+    margin-bottom: 0;
+    align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.forma {
+    margin: 0;
+}
+.important {
+    color: #d04373;
+    font-weight: bold;
+}
+.navbar li {
+    cursor: pointer;
+}
+.contact h2 {
+    background-color: transparent;
+    text-align: center ;
+    font-size: 2rem;
+    transition: all 5s;
+    -webkit-text-stroke: 2px #762641;
+    padding: 20px;
+    transition: padding .5s;
+    
+}
+.contact:hover {
+    transition: all .5s;
+    background-color: #762641;
+}
+.contact h2:hover {
+    padding: 0px;
+    transition: padding .5s;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8f2d43;
+    margin-top: 5%;
+    transition: all .5s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.arrowRight {
+    rotate: 180deg;
+    transition: rotate .5s;
+}
+.logoArrow {
+    width: 50px;
+    height: 50px;
+    transition: rotate .5s; 
+}
+.rotateRight {
+    rotate: 90deg;
+    transition: rotate .5s;
+}
+.magentaToggle {
+    background-color: #762641;
+}
+form {
+    display: flex ;
+    flex-direction: column;
+    color :white ;
+    background-color: #762641;
+    align-items: center;
+    height: 1px;
+    padding: 0;
+    padding-top: 3%;
+    overflow: hidden;
+}
+form label {
+    align-self: flex-start;
+    margin-left: 20%;
+    font-size: 1.5rem;
+}
+form #objectMail {
+    width: 20%;
+    margin-left: 20%;
+    align-self: flex-start;
+}
+form #mail {
+    width: 20%;
+    margin-left: 20%;
+    align-self: flex-start;
+}
+form input {
+    width: 60%;
+    height: 10%;
+}
+form .mainInput {   
+    width: 60%;
+    height: 500px;
+}
+.rotate {
+    rotate: 90deg;
+    transition: rotate .5s;
+}
+#pp {
+    width: 80px;
+    height: 80px;
+}
+.diplLogo {
+    width: 80px;
+    height: 80px;
+}
+.paddingBot{
+    padding-bottom: 10px;
+}
+.paddingTop{
+    padding-top: 10px;
+}
+
+header {
+    transition: all .3s ease-in-out;
+}
+/*Scroll*/
+.scroll-down header{
+    transform: translate3d(0, -100%, 0);
+}
+@media screen and (min-width : 994px) {
+    #nameTitle {
+        display: none;
+    }
+
+    .boutonToggle {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    #navbarSupportedContent {
+        overflow: hidden;
+        width: 100%;
+    }
+    .buttonModal:hover{
+        padding: 10px;
+        transition: all .5s;
+    }
+}
+/*-----------*/
+@media screen and (max-width : 993px) {
+    #divNavbar {
+        height: 100px;
+    }
+
+    .responsive {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burgerMenu ul {
+        position: inherit;
+        text-align: center;
+        top: 150px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+
+    .responsiveHidden {
+        display: none;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    .blur {
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 1s linear;
+    }
+
+    #imgPhoto {
+        height: 90px;
+        width: 100px;
+        margin-left: 30px;
+
+    }
+
+    
+}
+
+
+
+@media screen and (max-width : 498px){
+    .forH2 h2 , .efd h2{
+        font-size: 1em;
+    }
+    .para1 p, .efd p {
+        font-size: .9em;
+    }
+    .backSkills{
+        width: 90%;
+        margin: 5%;
+    }
+    #pp {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width : 439px){
+    #folioButton {
+        font-size: 20px;
+    }
+    .diplLogo {
+        width: 50px;
+        height: 50px;
+    }
+    .mask{
+        height: 400px;
+    }
+}
+
+
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
