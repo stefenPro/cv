@@ -243,7 +243,10 @@ var valid = {} ;
 mailExp.addEventListener('change',function(){
     if (regexs['mail'].test(mailExp.value)==false){
         valid['mail']=false ;
-        document.getElementById('erreurMail').classList.toggle('menuDesactive')
+        if (document.getElementById('erreurMail').classList.contains('menuDesactive')==true){
+            document.getElementById('erreurMail').classList.toggle('menuDesactive')
+        }
+        
         document.getElementById('erreurMail').innerHTML = 'Ce format de mail n\'est pas valide !'
     }else {
         valid['mail']=true ;
