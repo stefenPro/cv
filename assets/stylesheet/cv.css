@@ -359,7 +359,21 @@ button:hover {
     border-style: none;
     transition: all .5s;
 }
+.submitContact{
+    margin-bottom: 0;
+}
+.erreur{
+    color: #ff0000;
+    font-size: 1.5em;
+    -webkit-text-stroke: .5px #ff0000;
+    background-color: #5e1e34;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    align-self: flex-start;
+    margin-left: 20%;
 
+}
 .fs-perso {
     font-size: 20px;
 }
@@ -674,16 +688,7 @@ form label {
     margin-left: 20%;
     font-size: 1.5rem;
 }
-form #objectMail {
-    width: 20%;
-    margin-left: 20%;
-    align-self: flex-start;
-}
-form #mail {
-    width: 20%;
-    margin-left: 20%;
-    align-self: flex-start;
-}
+
 form input {
     width: 60%;
     height: 10%;
@@ -788,7 +793,20 @@ header {
     
 }
 
-
+@media screen and (max-width : 765px){
+    #objectMail {
+        width: 50% !important;
+        height: 30px;
+        margin-left: 20%;
+        align-self: flex-start;
+    }
+    #mail {
+        width: 50% !important;
+        height: 30px;
+        margin-left: 20%;
+        align-self: flex-start;
+    }
+}
 
 @media screen and (max-width : 498px){
     .forH2 h2 , .efd h2{
@@ -832,3 +850,22 @@ header {
 }
 
 
+#objectMail,#mail {
+    width: 20%;
+    height: 50px;
+    margin-left: 19.5%;
+    align-self: flex-start; 
+}
+
+#margin-write {
+    margin-top: 20px;
+}
+form input, form textarea {
+    all: unset ;
+    padding: 5px;
+    border-style: outset;
+    border-color: white;
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 25px;
+}

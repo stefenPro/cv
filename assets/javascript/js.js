@@ -194,6 +194,7 @@ if (burgerMenu.classList.contains('responsiveHidden') == true) {
 }
 
 /*form*/
+
 var form = document.querySelector('.formul');
 var contactButton = document.querySelector('.contact');
 var arrow = document.querySelectorAll('.logoArrow');
@@ -230,7 +231,73 @@ signalProblem.addEventListener('click',function(){
 })
 var mainInput = document.querySelector('.mainInput');
 var submitContactButton = document.querySelector('.submitContact');
-var objectMail = document.querySelector('objectMail');
+var objectMail = document.querySelector('#objectMail');
+var mailExp = document.querySelector('#mail')
+var emailVerify = document.querySelector('.emailVerify')
+
+/*REGEXS*/
+regexs = {'mail' : new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$') , 'object' : new RegExp('^[a-zA-Z0-9.-_]')}
+var valid = {} ;
+
+
+mailExp.addEventListener('change',function(){
+    if (regexs['mail'].test(mailExp.value)==false){
+        valid['mail']=false ;
+        document.getElementById('erreurMail').classList.toggle('menuDesactive')
+        document.getElementById('erreurMail').innerHTML = 'Ce format de mail n\'est pas valide !'
+    }else {
+        valid['mail']=true ;
+        if (document.getElementById('erreurMail').classList.contains('menuDesactive')==false){
+            document.getElementById('erreurMail').innerHTML = ''
+            document.getElementById('erreurMail').classList.toggle('menuDesactive')
+        }
+        document.getElementById('erreurMail').innerHTML = '';
+        mainInput.value = 'De : '+mailExp.value
+    }
+})
+
+objectMail.addEventListener('change',function(){
+    console.log(regexs['object'].test(objectMail.value))
+    if (regexs['object'].test(objectMail.value)==true && objectMail.value.length>1 && objectMail.value.length<30){
+        console.log('oui')
+        valid['object']=true
+        if (document.getElementById('erreurObject').classList.contains('menuDesactive')==false){
+            document.getElementById('erreurObject').innerHTML = ''
+            document.getElementById('erreurObject').classList.toggle('menuDesactive')
+        }
+        
+    }else {
+        document.getElementById('erreurObject').classList.toggle('menuDesactive')
+        if (objectMail.value.length<=1){
+            document.getElementById('erreurObject').innerHTML = 'Trop court !'
+        }else {
+            document.getElementById('erreurObject').innerHTML = 'Trop Long ! 30 Caractères Max.'
+        }
+        valid['object']=false
+        
+    }
+})
+/*-------------------------------*/
+
 submitContactButton.addEventListener('click',function(e){
     e.preventDefault();
+    if (valid['object']=true && valid['mail']==true){
+        Email.send({
+            SecureToken : "dd803a52-c718-47c0-a61f-f6260ebb02c5",
+            To : 'selonstefen@gmail.com',
+            From : "arkobtrd@gmail.com",
+            Subject : objectMail.value,
+            Body : mainInput.value
+        }).then(
+          message => alert(message)
+        );
+    }else if(valid==false) {
+        document.querySelector('#erreurGlob').innerHTML = 'Veuillez corriger'
+    }
+    
 })
+
+
+
+
+

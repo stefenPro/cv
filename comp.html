@@ -329,16 +329,19 @@
         <img src="assets/images/fleche.png" alt="Flèche droite" class="logoArrow arrowRight">
       </div>
       <form action="" method="GET" class="menuDesactive formul">
-        <label for="AdrsMail">Adresse Mail</label>
-        <input type="text" name="adrsMail" id="mail">
+        <label for="AdrsMail" aria-required="true">Adresse Mail</label>
+        <input type="text" name="adrsMail" id="mail" placeholder="Mail">
+        <p class="erreur menuDesactive" id="erreurMail"></p>
 
         <label for="objectMail">Objet</label>
-        <input type="text" name="objectMail" id="objectMail">
+        <input type="text" name="objectMail" id="objectMail" placeholder="Objet">
+        <p class="erreur menuDesactive" id="erreurObject"></p>
 
-        <label for="main">Ecrivez moi...</label>
+        <label for="main" id="margin-write">Ecrivez moi...</label>
         <textarea type="text" name="main" class="mainInput" placeholder="Bonjour..."></textarea>
 
         <button type="submit" class="submitContact">Envoyer</button>
+        <p class="erreur menuDesactive" id="erreurGlob"></p>
       </form>
   </main>
 
@@ -435,6 +438,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="assets/javascript/jquery.js"></script>
   <script src="assets/javascript/js.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
 </body>
 
 </html>
