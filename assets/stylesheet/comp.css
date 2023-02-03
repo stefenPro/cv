@@ -758,6 +758,11 @@ form .mainInput {
 .paddingTop{
     padding-top: 10px;
 }
+
+/*CV CONSTRUC PAGE*/
+.cvConstruct h1 {
+    color: white
+}
 @media screen and (min-width : 994px) {
     #nameTitle {
         display: none;

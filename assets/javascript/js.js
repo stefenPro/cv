@@ -237,7 +237,8 @@ var emailVerify = document.querySelector('.emailVerify')
 
 /*REGEXS*/
 regexs = {'mail' : new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$') , 'object' : new RegExp('^[a-zA-Z0-9.-_]')}
-var valid = {} ;
+var valid = {}
+
 
 
 mailExp.addEventListener('change',function(){
@@ -300,6 +301,12 @@ submitContactButton.addEventListener('click',function(e){
     
 })
 
+
+/*cvConstruct*/
+var screenOne = document.querySelector('#screenHTML')
+screenOne.addEventListener('click',function(){
+    this.animate({height: '1px'},500)
+})
 
 
 
