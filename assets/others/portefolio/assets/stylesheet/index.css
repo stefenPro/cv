@@ -1,0 +1,104 @@
+body {
+    background-color: #826f67;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 1vh;
+    margin: 0 ;
+    padding: 0;
+
+}
+.calque {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+}
+header{
+    background-image: url('../images/tatooine.jpg');
+    backdrop-filter: blur(50px);
+    background-position: 90px;
+    width: 100%;
+    height: 250px;
+    box-shadow: black 10px 10px 50px;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+h1 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: white;
+    font-size: 4em;
+    margin-left: 40px;
+    text-shadow: black 5px 5px 5px;
+    
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    transition: all .4s;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 25%;
+
+}
+.logo:hover {
+   padding: 0;
+   
+    transition: all .4s;
+}
+
+
+.cvDeroule {
+    height: 100px;
+    width: 0px;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+    color:white;
+    font-size: 2em;
+    
+    
+}
+hr {
+    width: 40%;
+    margin-left: 2%;
+}
+.cvDeroule p {
+    font-size: 0;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    text-decoration: underline gray;
+}
+
+
+/*BODY*/
+.bloc {
+    width: 90%;
+    height: 300px;
+    margin: 5%;
+    margin-top: 40px;
+    margin-bottom: 0;
+    background-color: #60524f;
+}
+@media screen and (max-width: 1023px){
+    .cvDeroule {
+        width: 300px;
+    }
+    .cvDeroule p {
+        font-size: .80em;
+    }
+}
+@media screen and (max-width: 622px){
+    h1 {
+        font-size: 3em;
+    }
+    
+}
+@media screen and (max-width: 474px){
+    h1 {
+        font-size: 2.5em;
+    }
+}

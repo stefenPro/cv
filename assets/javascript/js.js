@@ -232,53 +232,139 @@ signalProblem.addEventListener('click',function(){
 var mainInput = document.querySelector('.mainInput');
 var submitContactButton = document.querySelector('.submitContact');
 var objectMail = document.querySelector('#objectMail');
-var mailExp = document.querySelector('#mail')
-var emailVerify = document.querySelector('.emailVerify')
+var mailExp = document.querySelector('#mail');
+var emailVerify = document.querySelector('.emailVerify');
+var erreurMain = document.querySelector('#erreurMain');
+var succes = document.querySelector('.succes');
+
 
 /*REGEXS*/
 regexs = {'mail' : new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$') , 'object' : new RegExp('^[a-zA-Z0-9.-_]')}
 var valid = {}
 
-
+function formEstVide(){
+    var repEstVide = {}
+    if (mailExp.value == '' || objectMail.value == '' || mainInput.value == ''){
+        if (mailExp.value == ''){
+            repEstVide['mail'] = true
+        }else{
+            repEstVide['mail'] = false
+        }
+        if (objectMail.value == ''){
+            repEstVide['object'] = true
+        }else{
+            repEstVide['object'] = false
+        }
+        if (mainInput.value == ''){
+            repEstVide['mainInput'] = true
+        }else{
+            repEstVide['mainInput'] = false
+        }
+    }
+    if (mailExp.value == '' && objectMail.value == '' && mainInput.value == ''){
+        repEstVide['toutEstVide'] = true
+    }else {
+        repEstVide['toutEstVide'] = false
+    }
+    return repEstVide
+}
 
 mailExp.addEventListener('change',function(){
-    if (regexs['mail'].test(mailExp.value)==false){
-        valid['mail']=false ;
+    var estVide = formEstVide()
+    if (estVide['mail']){
         if (document.getElementById('erreurMail').classList.contains('menuDesactive')==true){
             document.getElementById('erreurMail').classList.toggle('menuDesactive')
         }
-        
-        document.getElementById('erreurMail').innerHTML = 'Ce format de mail n\'est pas valide !'
-    }else {
-        valid['mail']=true ;
-        if (document.getElementById('erreurMail').classList.contains('menuDesactive')==false){
-            document.getElementById('erreurMail').innerHTML = ''
-            document.getElementById('erreurMail').classList.toggle('menuDesactive')
+        document.getElementById('erreurMail').innerHTML = 'Veuillez remplir ce champs'
+        document.getElementById('mail').style.borderColor = 'red'
+    }else{
+        if (document.querySelector('#erreurGlob').classList.contains('menuDesactive')==false){
+            document.querySelector('#erreurGlob').classList.toggle('menuDesactive')
         }
-        document.getElementById('erreurMail').innerHTML = '';
-        mainInput.value = 'De : '+mailExp.value
+        if (regexs['mail'].test(mailExp.value)==false){
+            valid['mail']=false ;
+            if (document.getElementById('erreurMail').classList.contains('menuDesactive')==true){
+                document.getElementById('erreurMail').classList.toggle('menuDesactive')
+            }
+            document.getElementById('mail').style.borderColor = 'red'
+            document.getElementById('erreurMail').innerHTML = 'Ce format de mail n\'est pas valide !'
+        }else {
+            valid['mail']=true ;
+            document.getElementById('mail').style.borderColor = '#b43963'
+            if (document.getElementById('erreurMail').classList.contains('menuDesactive')==false){
+                document.getElementById('erreurMail').innerHTML = ''
+                document.getElementById('erreurMail').classList.toggle('menuDesactive')
+            }
+            document.getElementById('erreurMail').innerHTML = '';
+            mainInput.value = 'De : '+mailExp.value
+        }
+        
+
+
+
     }
+
+
+
+
+    
 })
 
 objectMail.addEventListener('change',function(){
-    console.log(regexs['object'].test(objectMail.value))
-    if (regexs['object'].test(objectMail.value)==true && objectMail.value.length>1 && objectMail.value.length<30){
-        console.log('oui')
-        valid['object']=true
-        if (document.getElementById('erreurObject').classList.contains('menuDesactive')==false){
-            document.getElementById('erreurObject').innerHTML = ''
-            document.getElementById('erreurObject').classList.toggle('menuDesactive')
+    var estVide = formEstVide()
+    console.log(estVide['object'])
+    if (estVide['object']){
+        if (document.querySelector('#erreurObject').classList.contains('menuDesactive')==true){
+            document.querySelector('#erreurObject').classList.toggle('menuDesactive')
+            
+           
         }
-        
+        document.getElementById('erreurObject').innerHTML = 'Veuillez remplir ce champs'
+        document.getElementById('objectMail').style.borderColor = 'red'
+
     }else {
-        document.getElementById('erreurObject').classList.toggle('menuDesactive')
-        if (objectMail.value.length<=1){
-            document.getElementById('erreurObject').innerHTML = 'Trop court !'
-        }else {
-            document.getElementById('erreurObject').innerHTML = 'Trop Long ! 30 Caractères Max.'
+        if (document.querySelector('#erreurGlob').classList.contains('menuDesactive')==false){
+            document.querySelector('#erreurGlob').classList.toggle('menuDesactive')
         }
-        valid['object']=false
-        
+        if (regexs['object'].test(objectMail.value)==true && objectMail.value.length>1 && objectMail.value.length<30){
+            console.log('oui')
+            valid['object']=true
+            document.getElementById('objectMail').style.borderColor = '#b43963'
+            if (document.getElementById('erreurObject').classList.contains('menuDesactive')==false){
+                document.getElementById('erreurObject').innerHTML = ''
+                document.getElementById('erreurObject').classList.toggle('menuDesactive')
+                
+            }
+            
+        }else {
+            document.getElementById('objectMail').style.borderColor = 'red'
+            document.getElementById('erreurObject').classList.toggle('menuDesactive')
+            if (objectMail.value.length<=1){
+                document.getElementById('erreurObject').innerHTML = 'Trop court !'
+            }else {
+                document.getElementById('erreurObject').innerHTML = 'Trop Long ! 30 Caractères Max.'
+            }
+            valid['object']=false
+            
+        }
+    }
+    
+})
+
+mainInput.addEventListener('change',function(){
+    var estVide = formEstVide()
+    if (estVide['mainInput']){
+        if (erreurMain.classList.contains('menuDesactive')){
+            erreurMain.classList.toggle('menuDesactive')
+        }
+        erreurMain.innerHTML = 'Veuillez saisir votre message'
+        document.querySelector('.mainInput').style.borderColor = 'red'
+    }else {
+        document.querySelector('.mainInput').style.borderColor = '#b43963'
+        erreurMain.innerHTML = ''
+        if (erreurMain.classList.contains('menuDesactive')){
+            erreurMain.classList.toggle('menuDesactive')
+        }
     }
 })
 /*-------------------------------*/
@@ -293,20 +379,26 @@ submitContactButton.addEventListener('click',function(e){
             Subject : objectMail.value,
             Body : mainInput.value
         }).then(
-          message => alert(message)
+            function(){
+                if (succes.classList.contains('menuDesactive')){
+                    succes.classList.toggle('menuDesactive')
+                    succes.innerHTML = 'Mail envoyé avec succés'
+                }
+            }
+          
         );
-    }else if(valid==false) {
-        document.querySelector('#erreurGlob').innerHTML = 'Veuillez corriger'
+    }else {
+        
+        if (document.querySelector('#erreurGlob').classList.contains('menuDesactive')){
+            document.querySelector('#erreurGlob').classList.toggle('menuDesactive')
+        }
+        document.querySelector('#erreurGlob').innerHTML = 'Veuillez corriger les erreurs'
     }
     
 })
 
 
-/*cvConstruct*/
-var screenOne = document.querySelector('#screenHTML')
-screenOne.addEventListener('click',function(){
-    this.animate({height: '1px'},500)
-})
+
 
 
 

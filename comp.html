@@ -133,6 +133,10 @@
                     <li>Organisation du contenu des pages Web / <span class="bold">Indentation</span></li>
                   </ul>
                   <hr>
+                  <h5>Frameworks/Librairies connus/es :</h5>
+                <ul class="ulFrames">
+                  <li><img src="assets/images/bootstrap.png" alt="image Bootstrap" class="logoframe"></li>
+                </ul>
                 </div>
               </div>
             </div>
@@ -155,10 +159,7 @@
                     <li>Bonne maîtrise des <span class="bold">selecteurs</span></li>
                   </ul>
                   <hr>
-                  <h5>Frameworks/Librairies connus/es :</h5>
-                <ul class="ulFrames">
-                  <li><img src="assets/images/bootstrap.png" alt="image Bootstrap" class="logoframe"></li>
-                </ul>
+                  
                 </div>
 
               </div>
@@ -281,7 +282,7 @@
 
 
       <!------------------------------------------>
-      <a href="https://getbootstrap.com/docs/5.0/utilities/text/" role="button">
+      <a href="assets/others/portefolio/index.html" role="button">
         <button type="button" id="folioButton"><img src="assets/images/presse-papiers.png" id="pp">PORTE FOLIO</button>
       </a>
       <section id="etude">
@@ -339,9 +340,12 @@
 
         <label for="main" id="margin-write">Ecrivez moi...</label>
         <textarea type="text" name="main" class="mainInput" placeholder="Bonjour..."></textarea>
+        <p class="erreur menuDesactive" id="erreurMain"></p>
 
         <button type="submit" class="submitContact">Envoyer</button>
         <p class="erreur menuDesactive" id="erreurGlob"></p>
+        <div class="sticky-top"><p class="succes menuDesactive"></p></div>
+        
       </form>
   </main>
 
@@ -383,12 +387,7 @@
             <h6 class="text-uppercase fw-bold mb-4 ">
               Liens utiles
             </h6>
-            <p>
-              <a href="#!" class="text-reset">Crédits</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Mentions Légales</a>
-            </p>
+            
             <p>
               <a href="#!" class="text-reset signalAlert">Signaler un problème</a>
             </p>
