@@ -131,7 +131,7 @@ function compare(resultat,alea) {
         }
 
     }else if (res.textContent == 'Egalité'){
-        res.style.color = 'gray' ;
+        res.style.color = '#ad9062' ;
     }
 }
 
