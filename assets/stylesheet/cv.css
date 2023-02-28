@@ -373,17 +373,7 @@ button:hover {
     align-self: flex-start;
     margin-left: 20%;
 }
-.succes{
-    color: green;
-    font-size: 1.5em;
-    -webkit-text-stroke: .5px green;
-    background-color: #5e1e34;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    align-self: flex-start;
-    margin-left: 20%;
-}
+
 .fs-perso {
     font-size: 20px;
 }
@@ -948,10 +938,21 @@ form input, form textarea {
     transition: all .4s;
 }
 .succes {
-    align-self: center;
-    margin: 0;
-    margin-top: 20px;
+    width: 300px;
+    height: 0;
     right: 0;
+    top: 0;
+    margin: 0;
+    z-index: 99999999999;
+    box-shadow: 3px 3px 10px black;
+    color: white;
+    font-weight: bold;
+    font-size: 0em;
+  
+    background-color: #990000;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+
     
-    z-index: 99999;
 }

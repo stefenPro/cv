@@ -1,4 +1,24 @@
 /*RESPONSIVE*/
+
+function setTime(s){
+    if (s == 0){
+        return true
+    }else {
+        console.log(s)
+        s--
+        
+    }
+}
+
+setTime(10)
+
+
+   
+
+   
+
+
+
 const
     screen = {
         small: 0,
@@ -368,7 +388,6 @@ mainInput.addEventListener('change',function(){
     }
 })
 /*-------------------------------*/
-
 submitContactButton.addEventListener('click',function(e){
     e.preventDefault();
     if (valid['object']=true && valid['mail']==true){
@@ -382,8 +401,15 @@ submitContactButton.addEventListener('click',function(e){
             function(){
                 if (succes.classList.contains('menuDesactive')){
                     succes.classList.toggle('menuDesactive')
+                    $('.succes').animate({height : '70px'},100)
+                    $('.succes').animate({fontSize : '1.5em'},100)
                     succes.innerHTML = 'Mail envoyé avec succés'
+                    
+                    
                 }
+                
+                
+             
             }
           
         );
