@@ -385,7 +385,11 @@ submitContactButton.addEventListener('click',function(e){
                     $('.succes').animate({fontSize : '1.5em'},100);
                     succes.innerHTML = 'Mail envoyé avec succés';
                     setTimeout(() => {
-                        succes.classList.toggle('menuDesactive');
+                        $('.succes').animate({height : '0px'},100);
+                        $('.succes').animate({fontSize : '0em'},100,function(){
+                            succes.classList.toggle('menuDesactive');
+                        });
+                        
                     }, 5000)
                     
                     

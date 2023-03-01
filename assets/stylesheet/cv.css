@@ -871,7 +871,9 @@ h1 .logoframe {
         align-self: flex-start;
     }
 }
-
+.height {
+    height: 310px;
+}
 @media screen and (max-width : 498px){
     .forH2 h2 , .efd h2{
         font-size: 1em;
@@ -886,6 +888,15 @@ h1 .logoframe {
     #pp {
         width: 40px;
         height: 40px;
+    }
+    .height {
+        height: 400px;
+    }
+    .bloc h2 {
+        font-size: 1.4em
+    }
+    .bloc h1 {
+        font-size: 1.4em;
     }
 }
 @media screen and (max-width : 439px){
@@ -955,4 +966,24 @@ form input, form textarea {
     border-radius: 10px;
 
     
+}
+.cvConstruct h1, .me h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #431524;
+}
+.cvConstruct .para p, .me .uniqContent {
+    text-align: center;
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+.me .uniqContent{
+    font-size: 1.3em;
+}
+.me hr {
+    margin-top: 3%;
+}
+.colored{
+    color: #db4566;
 }
