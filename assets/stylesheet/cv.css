@@ -874,6 +874,9 @@ h1 .logoframe {
 .height {
     height: 310px;
 }
+.container .text-reset{
+    color: #db4566 !important;
+}
 @media screen and (max-width : 498px){
     .forH2 h2 , .efd h2{
         font-size: 1em;
@@ -980,6 +983,9 @@ form input, form textarea {
 }
 .me .uniqContent{
     font-size: 1.3em;
+    padding: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .me hr {
     margin-top: 3%;

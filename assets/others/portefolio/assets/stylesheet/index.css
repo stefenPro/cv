@@ -50,7 +50,9 @@ h1 {
    
     transition: all .4s;
 }
-
+.flex {
+    width: 100%;
+}
 
 .cvDeroule {
     height: 100px;
@@ -71,6 +73,13 @@ hr {
     font-size: 0;
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
     text-decoration: underline gray;
+}
+header .responsiveCVText {
+    display: none;
+    font-size: 2.3em;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    text-decoration: underline;
+    color: whitesmoke
 }
 a,a:hover{
     text-decoration: none;
@@ -105,8 +114,8 @@ a,a:hover{
     transition: all .5s;
 }
 .bloc p{
-    width: 400px;
-    margin-left: 60%;
+    width: 70%;
+    margin-left: 40%;
 }
 h2 {
     text-align: center;
@@ -116,12 +125,24 @@ h2 {
     text-shadow: black 5px 5px 5px;
 }
 @media screen and (max-width: 1023px){
+    .calque {
+        display: flex;
+        flex-direction: column;
+    }
+    a,#logoCV{
+        margin: 0 ;
+        padding: 0 !important;
+        margin-left: 5%;
+    }
     .cvDeroule {
-        width: 300px;
+        display: none;
     }
-    .cvDeroule p {
-        font-size: .80em;
+    header .responsiveCVText {
+        display: flex;
+        margin-left: 10.5%;
     }
+
+
 }
 @media screen and (max-width: 622px){
     h1 {
