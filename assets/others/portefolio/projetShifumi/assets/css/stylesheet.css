@@ -154,18 +154,19 @@ vert{
 }
 @media screen and (max-width: 888px){
     #btn{
-        font-size: 2em
+        margin-top: 6em;
+        font-size: 2em;
+    }
+    #link {
+        top: 10em;
+        width: 30%;
     }
 }
 @media screen and (max-width: 723px){
-    #btn{
-        font-size: 1.5em
-    }
+   
 }
 @media screen and (max-width: 560px){
-    #btn{
-        font-size: 1.1em
-    }
+    
 }
 
 @media screen and (max-width: 741px){
@@ -183,7 +184,7 @@ vert{
     }
 }
 
-@media screen and (max-width: 487px){
+@media screen and (max-width: 540px){
     #korogus{
         width: 100%;
         left:0;
@@ -198,5 +199,11 @@ vert{
 @media screen and (max-width: 560px){
     #linkWin,#linkEgal,#linkLoose{
         width: 20%;
+    }
+}
+
+@media screen and (max-width: 473px){
+    h2{
+        margin-top: 10px;
     }
 }
