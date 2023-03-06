@@ -16,6 +16,7 @@ var linkEgal = document.getElementById('linkEgal');
 var bombeSound = new Audio(); bombeSound.src = 'explosion.mp3';
 var ventSound = new Audio(); ventSound.src = 'vent.mp3';
 var swordSound = new Audio(); swordSound.src = 'sword.mp3';
+var gameOver = new Audio(); gameOver.src = 'gameover.mp3';
 var backgroundSound = new Audio(); backgroundSound.src = 'zeldaLuballys.mp3';
 backgroundSound.volume = 0.3;
 var korogusImage = document.querySelector('#korogus');
@@ -29,7 +30,7 @@ linkEgal.style.display = 'none';
 replay.style.display = 'none';
 
 replay.addEventListener('click', function () {
-    document.querySelector('.boutons').style.display = 'block';
+    document.querySelector('.boutons').style.display = 'flex';
     korogusImage.style.display = 'block';
     res.style.display = 'none';
     res2.style.display = 'none';
@@ -42,6 +43,7 @@ replay.addEventListener('click', function () {
     ventSound.pause();
     bombeSound.pause();
     swordSound.pause();
+    gameOver.pause();
 
 })
 function addBouton(name, where, text) {
@@ -60,6 +62,7 @@ function compare(resultat, alea) {
 
     } else if (resultat == 'bombe' && li[alea - 1].textContent == 'eventail') {
         res.innerHTML = 'Perdu !';
+        gameOver.play();
         res2.innerHTML = 'Vous avez choisi' + ' ' + '<span>' + resultat + '</span>' + '<br>'
             + 'Votre adversaire a choisi' + ' ' + '<span>' + li[alea - 1].textContent + '</span>'
 
@@ -75,6 +78,7 @@ function compare(resultat, alea) {
             + 'Votre adversaire a choisi' + ' ' + '<span>' + li[alea - 1].textContent + '</span>'
 
     } else if (resultat == 'excalibur' && li[alea - 1].textContent == 'bombe') {
+        gameOver.play();
         res.innerHTML = 'Perdu !';
         res2.innerHTML = 'Vous avez choisi' + ' ' + '<span>' + resultat + '</span>' + '<br>'
             + 'Votre adversaire a choisi' + ' ' + '<span>' + li[alea - 1].textContent + '</span>'
@@ -85,11 +89,13 @@ function compare(resultat, alea) {
             + 'Votre adversaire a choisi' + ' ' + '<span>' + li[alea - 1].textContent + '</span>'
 
     } else if (resultat == 'eventail' && li[alea - 1].textContent == 'excalibur') {
+        gameOver.play();
         res.innerHTML = 'Perdu !';
         res2.innerHTML = 'Vous avez choisi' + ' ' + '<span>' + resultat + '</span>' + '<br>'
             + 'Votre adversaire a choisi' + ' ' + '<span>' + li[alea - 1].textContent + '</span>'
 
     } else if (resultat == 'excalibur' && li[alea - 1].textContent == 'bombe') {
+        gameOver.play();
         res.innerHTML = 'Perdu !';
         res2.innerHTML = 'Vous avez choisi' + ' ' + '<span>' + resultat + '</span>' + '<br>'
             + 'Votre adversaire a choisi' + ' ' + '<span>' + li[alea - 1].textContent + '</span>'
@@ -122,6 +128,7 @@ function compare(resultat, alea) {
             swordSound.play();
         }
     } else if (res.textContent == 'Perdu !') {
+        gameOver.play();
         res.style.color = 'red';
         if (li[alea - 1].textContent == 'bombe') {
             bombeSound.play();
@@ -153,7 +160,7 @@ btn.addEventListener('click', function () {
     addBouton('excalibur', document.querySelector('.boutons'), 'EXCALIBUR');
     btn.style.display = 'none';
     link.style.display = 'none';
-    document.querySelector('.boutons').style.display = 'block';
+    document.querySelector('.boutons').style.display = 'flex';
     bombe.addEventListener('click', function () {
         res2.style.display = 'block';
         res.style.display = 'block';
