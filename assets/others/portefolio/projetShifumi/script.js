@@ -117,6 +117,7 @@ function compare(resultat, alea) {
     bombeSound.currentTime = 0;
     ventSound.currentTime = 0;
     swordSound.currentTime = 0;
+    gameOver.currentTime = 0;
 
     if (res.textContent == 'Gagné !') {
         res.style.color = '#20c56d';
