@@ -5,8 +5,8 @@
 #imgPhotoMain{
     margin-top: 15px;
     margin-left: 1em;
-    height: auto;
-    width: auto;
+    height: 175px;
+    width: 230px;
     filter: drop-shadow(-4px 4px 2px black);
 
 }
